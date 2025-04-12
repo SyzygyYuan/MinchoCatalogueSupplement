@@ -7,6 +7,10 @@
       明朝體活字字形一覽補編
     </h1>
     <br/>
+    <table>
+    <tbody id="result">
+    </tbody>
+    </table>
     <script>
     	var requestURL = "data.json";
     	var request = new XMLHttpRequest();
@@ -15,7 +19,7 @@
     	request.send();
     	request.onload = function () {
   		var table = request.response;
-  		document.write(table);
+  		document.getElementById("result").innerText+=table[0]["zi"];
   	};
     </script>
   </body>
