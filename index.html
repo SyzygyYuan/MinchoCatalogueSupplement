@@ -8,6 +8,9 @@
     </h1>
     <br/>
     <table>
+    <thead>
+    <tr><td width="3em">字頭</td><td>字樣</td></tr>
+    </thead>
     <tbody id="result">
     </tbody>
     </table>
@@ -19,7 +22,12 @@
     	request.send();
     	request.onload = function () {
   		var table = request.response;
-  		document.getElementById("result").innerText+=table[0]["zi"];
+  		let tableRef=document.getElementById("result");
+  		for(i=0;i<table.length;i++){
+  			let newRow=tableRef.insertRow(-1);
+  			newRow.insertCell(0).innerText=table[i]["zi"];
+  			newRow.insertCell(1).innerText=table[i]["img"];
+  		}
   	};
     </script>
   </body>
