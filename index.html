@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>明朝體活字字形一覽補編</title>
+  </head>
+  <body>
+    <h1>
+      明朝體活字字形一覽補編
+    </h1>
+    <br/>
+    <script>
+    	var requestURL = "dict.json";
+    	var request = new XMLHttpRequest();
+    	request.open("GET", requestURL);
+    	request.responseType = "json";
+    	request.send();
+    	request.onload = function () {
+  		var table = request.response;
+  		document.write(table);
+  	};
+    </script>
+  </body>
+</html>
