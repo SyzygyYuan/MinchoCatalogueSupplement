@@ -27,7 +27,7 @@
   			let newRow=tableRef.insertRow(-1);
   			newRow.insertCell(0).innerText=table[i]["zi"];
   			for(j=0;j<table[i]["img"].length;j++){
-  				newRow.insertCell(1).innerText+="<img src=\""table[i]+"/"+table[i]["img"][j]+"\"/>"+table[i]["img"][j];
+  				newRow.insertCell(1).innerText+="<img src=\""+table[i]+"/"+table[i]["img"][j]+"\"/>"+table[i]["img"][j];
   			}
   		}
   	};
